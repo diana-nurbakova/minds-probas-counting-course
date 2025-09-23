@@ -1,0 +1,39 @@
+<svg width="520" height="150" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="250" y="25" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">
+    7-Digit Code
+  </text>
+  
+  <!-- Digit box 1 - Known: 1 -->
+  <rect x="20" y="50" width="60" height="80" fill="#90EE90" stroke="#2E7D32" stroke-width="3" rx="5"/>
+  <text x="50" y="105" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="#1B5E20">1</text>
+  
+  <!-- Digit box 2 - Known: 1 -->
+  <rect x="90" y="50" width="60" height="80" fill="#90EE90" stroke="#2E7D32" stroke-width="3" rx="5"/>
+  <text x="120" y="105" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="#1B5E20">1</text>
+  
+  <!-- Digit box 3 - Known: 6 -->
+  <rect x="160" y="50" width="60" height="80" fill="#90EE90" stroke="#2E7D32" stroke-width="3" rx="5"/>
+  <text x="190" y="105" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="#1B5E20">6</text>
+  
+  <!-- Digit box 4 - Unknown -->
+  <rect x="230" y="50" width="60" height="80" fill="#FFE4E1" stroke="#FF6B6B" stroke-width="3" rx="5"/>
+  <text x="260" y="105" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="#C62828">?</text>
+  
+  <!-- Digit box 5 - Unknown -->
+  <rect x="300" y="50" width="60" height="80" fill="#FFE4E1" stroke="#FF6B6B" stroke-width="3" rx="5"/>
+  <text x="330" y="105" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="#C62828">?</text>
+  
+  <!-- Digit box 6 - Unknown -->
+  <rect x="370" y="50" width="60" height="80" fill="#FFE4E1" stroke="#FF6B6B" stroke-width="3" rx="5"/>
+  <text x="400" y="105" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="#C62828">?</text>
+  
+  <!-- Digit box 7 - Unknown -->
+  <rect x="440" y="50" width="60" height="80" fill="#FFE4E1" stroke="#FF6B6B" stroke-width="3" rx="5"/>
+  <text x="470" y="105" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="#C62828">?</text>
+  
+  <!-- Labels -->
+  <text x="250" y="145" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666" font-style="italic">
+    Known: 1 1 6  |  Unknown: ? ? ? ?
+  </text>
+</svg>
