@@ -1,0 +1,3 @@
+# Virtual environments 
+venv/ 
+resources/__pycache__/counting_utils.cpython-310.pyc
