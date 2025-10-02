@@ -1,0 +1,89 @@
+<svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="emailShadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.2"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Spam Email -->
+  <g transform="translate(30, 30)">
+    <!-- Email container -->
+    <rect width="280" height="250" rx="8" fill="#fff" stroke="#ddd" stroke-width="2" filter="url(#emailShadow)"/>
+    
+    <!-- Email header -->
+    <rect width="280" height="40" rx="8" fill="#ffebee" stroke="#ddd" stroke-width="2"/>
+    
+    <!-- Envelope icon -->
+    <rect x="15" y="12" width="20" height="16" rx="2" fill="#e57373" stroke="#c62828" stroke-width="1"/>
+    <path d="M 15,12 L 25,20 L 35,12" stroke="#c62828" stroke-width="1.5" fill="none"/>
+    
+    <!-- From label -->
+    <text x="45" y="20" font-family="Arial, sans-serif" font-size="10" fill="#666" font-weight="bold">From:</text>
+    <text x="45" y="32" font-family="Arial, sans-serif" font-size="9" fill="#c62828">winner@lottery-claim.xyz</text>
+    
+    <!-- Subject -->
+    <text x="15" y="65" font-family="Arial, sans-serif" font-size="11" fill="#333" font-weight="bold">Subject: CONGRATULATIONS!!!</text>
+    
+    <!-- Email body -->
+    <text x="15" y="90" font-family="Arial, sans-serif" font-size="10" fill="#333">You've WON $1,000,000!</text>
+    <text x="15" y="110" font-family="Arial, sans-serif" font-size="9" fill="#555">Click HERE to claim your prize</text>
+    <text x="15" y="125" font-family="Arial, sans-serif" font-size="9" fill="#555">NOW!!! Limited time offer!!!</text>
+    <text x="15" y="145" font-family="Arial, sans-serif" font-size="9" fill="#555">Send us your bank details and</text>
+    <text x="15" y="160" font-family="Arial, sans-serif" font-size="9" fill="#555">social security number to verify</text>
+    <text x="15" y="175" font-family="Arial, sans-serif" font-size="9" fill="#555">your identity.</text>
+    
+    <!-- Suspicious button -->
+    <rect x="15" y="195" width="100" height="30" rx="5" fill="#ff5722"/>
+    <text x="65" y="215" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold" text-anchor="middle">CLAIM NOW!</text>
+  </g>
+  
+  <!-- "SPAM" label -->
+  <g transform="translate(140, 310)">
+    <rect x="-40" y="-20" width="80" height="35" rx="5" fill="#f44336"/>
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="16" fill="white" font-weight="bold" text-anchor="middle">SPAM</text>
+  </g>
+  
+  <!-- Not Spam Email -->
+  <g transform="translate(390, 30)">
+    <!-- Email container -->
+    <rect width="280" height="250" rx="8" fill="#fff" stroke="#ddd" stroke-width="2" filter="url(#emailShadow)"/>
+    
+    <!-- Email header -->
+    <rect width="280" height="40" rx="8" fill="#e8f5e9" stroke="#ddd" stroke-width="2"/>
+    
+    <!-- Envelope icon -->
+    <rect x="15" y="12" width="20" height="16" rx="2" fill="#81c784" stroke="#2e7d32" stroke-width="1"/>
+    <path d="M 15,12 L 25,20 L 35,12" stroke="#2e7d32" stroke-width="1.5" fill="none"/>
+    
+    <!-- From label -->
+    <text x="45" y="20" font-family="Arial, sans-serif" font-size="10" fill="#666" font-weight="bold">From:</text>
+    <text x="45" y="32" font-family="Arial, sans-serif" font-size="9" fill="#2e7d32">sarah@company.com</text>
+    
+    <!-- Subject -->
+    <text x="15" y="65" font-family="Arial, sans-serif" font-size="11" fill="#333" font-weight="bold">Subject: Team meeting tomorrow</text>
+    
+    <!-- Email body -->
+    <text x="15" y="90" font-family="Arial, sans-serif" font-size="10" fill="#333">Hi Team,</text>
+    <text x="15" y="110" font-family="Arial, sans-serif" font-size="9" fill="#555">Just a reminder that we have our</text>
+    <text x="15" y="125" font-family="Arial, sans-serif" font-size="9" fill="#555">weekly team meeting tomorrow at</text>
+    <text x="15" y="140" font-family="Arial, sans-serif" font-size="9" fill="#555">10 AM in Conference Room B.</text>
+    <text x="15" y="160" font-family="Arial, sans-serif" font-size="9" fill="#555">Please review the Q3 report</text>
+    <text x="15" y="175" font-family="Arial, sans-serif" font-size="9" fill="#555">before the meeting.</text>
+    <text x="15" y="200" font-family="Arial, sans-serif" font-size="9" fill="#555">Best regards,</text>
+    <text x="15" y="215" font-family="Arial, sans-serif" font-size="9" fill="#555">Sarah</text>
+  </g>
+  
+  <!-- "NOT SPAM" label -->
+  <g transform="translate(500, 310)">
+    <rect x="-50" y="-20" width="100" height="35" rx="5" fill="#4CAF50"/>
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="16" fill="white" font-weight="bold" text-anchor="middle">NOT SPAM</text>
+  </g>
+</svg>
