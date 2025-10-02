@@ -1,0 +1,42 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dice body -->
+  <g id="dice">
+    <rect x="60" y="60" width="80" height="80" rx="10" fill="white" stroke="black" stroke-width="2"/>
+    
+    <!-- Dots for number 6 (will change during animation) -->
+    <g id="dots">
+      <!-- Top row -->
+      <circle cx="80" cy="80" r="6" fill="black">
+        <animate attributeName="opacity" values="1;0;1;0;1" dur="1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="120" cy="80" r="6" fill="black">
+        <animate attributeName="opacity" values="0;1;0;1;0" dur="1s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Middle row -->
+      <circle cx="80" cy="100" r="6" fill="black">
+        <animate attributeName="opacity" values="1;1;0;1;1" dur="1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="120" cy="100" r="6" fill="black">
+        <animate attributeName="opacity" values="1;0;1;0;1" dur="1s" repeatCount="indefinite"/>
+      </circle>
+      
+      <!-- Bottom row -->
+      <circle cx="80" cy="120" r="6" fill="black">
+        <animate attributeName="opacity" values="0;1;1;1;0" dur="1s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="120" cy="120" r="6" fill="black">
+        <animate attributeName="opacity" values="1;0;1;1;1" dur="1s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    
+    <!-- Rotation animation -->
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="0 100 100"
+      to="360 100 100"
+      dur="1s"
+      repeatCount="indefinite"/>
+  </g>
+</svg>
