@@ -1,0 +1,101 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Define patterns for fills -->
+  <defs>
+    <pattern id="diag1" patternUnits="userSpaceOnUse" width="8" height="8">
+      <path d="M-1,1 l2,-2 M0,8 l8,-8 M7,9 l2,-2" stroke="#8B0000" stroke-width="1.5"/>
+    </pattern>
+    <pattern id="diag2" patternUnits="userSpaceOnUse" width="8" height="8">
+      <path d="M1,-1 l-2,2 M8,0 l-8,8 M9,7 l-2,2" stroke="#006400" stroke-width="1.5"/>
+    </pattern>
+    <pattern id="vert" patternUnits="userSpaceOnUse" width="6" height="8">
+      <path d="M3,0 l0,8" stroke="#00008B" stroke-width="1.5"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="400" fill="white"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">
+    Continuous Random Variable Y and Discrete X
+  </text>
+  
+  <!-- Axes -->
+  <line x1="80" y1="300" x2="720" y2="300" stroke="#333" stroke-width="2"/>
+  <line x1="80" y1="300" x2="80" y2="80" stroke="#333" stroke-width="2"/>
+  
+  <!-- Axis labels -->
+  <text x="400" y="340" text-anchor="middle" font-size="14">Y</text>
+  <text x="40" y="190" text-anchor="middle" font-size="14" transform="rotate(-90, 40, 190)">Density</text>
+  
+  <!-- X-axis tick labels -->
+  <text x="80" y="320" text-anchor="middle" font-size="12">0</text>
+  <text x="186.67" y="320" text-anchor="middle" font-size="12">1/6</text>
+  <text x="293.33" y="320" text-anchor="middle" font-size="12">2/6</text>
+  <text x="400" y="320" text-anchor="middle" font-size="12">3/6</text>
+  <text x="506.67" y="320" text-anchor="middle" font-size="12">4/6</text>
+  <text x="613.33" y="320" text-anchor="middle" font-size="12">5/6</text>
+  <text x="720" y="320" text-anchor="middle" font-size="12">1</text>
+  
+  <!-- Y-axis ticks -->
+  <line x1="75" y1="300" x2="80" y2="300" stroke="#333" stroke-width="1"/>
+  <line x1="75" y1="190" x2="80" y2="190" stroke="#333" stroke-width="1"/>
+  <line x1="75" y1="80" x2="80" y2="80" stroke="#333" stroke-width="1"/>
+  <text x="70" y="305" text-anchor="end" font-size="11">0</text>
+  <text x="70" y="195" text-anchor="end" font-size="11">0.5</text>
+  <text x="70" y="85" text-anchor="end" font-size="11">1</text>
+  
+  <!-- Grid lines (vertical dividers for 6 intervals) -->
+  <line x1="80" y1="80" x2="80" y2="300" stroke="#999" stroke-width="1" stroke-dasharray="5,5" opacity="0.5"/>
+  <line x1="186.67" y1="80" x2="186.67" y2="300" stroke="#999" stroke-width="1" stroke-dasharray="5,5" opacity="0.5"/>
+  <line x1="293.33" y1="80" x2="293.33" y2="300" stroke="#999" stroke-width="1" stroke-dasharray="5,5" opacity="0.5"/>
+  <line x1="400" y1="80" x2="400" y2="300" stroke="#999" stroke-width="1" stroke-dasharray="5,5" opacity="0.5"/>
+  <line x1="506.67" y1="80" x2="506.67" y2="300" stroke="#999" stroke-width="1" stroke-dasharray="5,5" opacity="0.5"/>
+  <line x1="613.33" y1="80" x2="613.33" y2="300" stroke="#999" stroke-width="1" stroke-dasharray="5,5" opacity="0.5"/>
+  <line x1="720" y1="80" x2="720" y2="300" stroke="#999" stroke-width="1" stroke-dasharray="5,5" opacity="0.5"/>
+  
+  <!-- PDF of Y (uniform distribution - horizontal line at 1) -->
+  <rect x="80" y="80" width="640" height="220" fill="lightblue" opacity="0.1"/>
+  <line x1="80" y1="80" x2="720" y2="80" stroke="blue" stroke-width="3"/>
+  
+  <!-- Highlight intervals with patterns -->
+  <!-- Interval 1: [0, 2/6) = [80, 293.33) -> X = -1 -->
+  <rect x="80" y="80" width="213.33" height="220" fill="url(#diag1)" opacity="0.5"/>
+  <rect x="80" y="80" width="213.33" height="220" fill="#ff6b6b" opacity="0.2"/>
+  
+  <!-- Interval 2: [2/6, 5/6) = [293.33, 613.33) -> X = 0 -->
+  <rect x="293.33" y="80" width="320" height="220" fill="url(#diag2)" opacity="0.5"/>
+  <rect x="293.33" y="80" width="320" height="220" fill="#90ee90" opacity="0.2"/>
+  
+  <!-- Interval 3: [5/6, 1] = [613.33, 720] -> X = 1 -->
+  <rect x="613.33" y="80" width="106.67" height="220" fill="url(#vert)" opacity="0.5"/>
+  <rect x="613.33" y="80" width="106.67" height="220" fill="#6b9eff" opacity="0.2"/>
+  
+  <!-- Annotate P = 1/6 for each of the 6 intervals -->
+  <text x="133.33" y="195" text-anchor="middle" font-size="11" fill="#333">P = 1/6</text>
+  <text x="240" y="195" text-anchor="middle" font-size="11" fill="#333">P = 1/6</text>
+  <text x="346.67" y="195" text-anchor="middle" font-size="11" fill="#333">P = 1/6</text>
+  <text x="453.33" y="195" text-anchor="middle" font-size="11" fill="#333">P = 1/6</text>
+  <text x="560" y="195" text-anchor="middle" font-size="11" fill="#333">P = 1/6</text>
+  <text x="666.67" y="195" text-anchor="middle" font-size="11" fill="#333">P = 1/6</text>
+  
+  <!-- Annotate the three grouped intervals -->
+  <!-- X = -1 annotation -->
+  <rect x="130" y="45" width="110" height="35" fill="#ffe6e6" stroke="#8B0000" stroke-width="2" rx="5"/>
+  <text x="185" y="58" text-anchor="middle" font-size="12" font-weight="bold" fill="#8B0000">X = -1</text>
+  <text x="185" y="73" text-anchor="middle" font-size="11" font-weight="bold" fill="#8B0000">P(X=-1) = 1/3</text>
+  
+  <!-- X = 0 annotation -->
+  <rect x="398" y="45" width="110" height="35" fill="#e6ffe6" stroke="#006400" stroke-width="2" rx="5"/>
+  <text x="453" y="58" text-anchor="middle" font-size="12" font-weight="bold" fill="#006400">X = 0</text>
+  <text x="453" y="73" text-anchor="middle" font-size="11" font-weight="bold" fill="#006400">P(X=0) = 1/2</text>
+  
+  <!-- X = 1 annotation -->
+  <rect x="610" y="45" width="100" height="35" fill="#e6e6ff" stroke="#00008B" stroke-width="2" rx="5"/>
+  <text x="660" y="58" text-anchor="middle" font-size="12" font-weight="bold" fill="#00008B">X = 1</text>
+  <text x="660" y="73" text-anchor="middle" font-size="11" font-weight="bold" fill="#00008B">P(X=1) = 1/6</text>
+  
+  <!-- Legend for PDF -->
+  <line x1="90" y1="360" x2="130" y2="360" stroke="blue" stroke-width="3"/>
+  <text x="140" y="365" font-size="12" fill="#333">PDF of Y (uniform on [0,1])</text>
+</svg>
