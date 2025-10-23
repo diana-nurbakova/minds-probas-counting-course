@@ -1,0 +1,205 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- Title -->
+  <text x="600" y="35" font-size="26" font-weight="bold" text-anchor="middle" fill="#1565c0">
+    Solving the Circular Ad Carousel with Random Vectors
+  </text>
+  
+  <!-- Step 1: Problem Setup -->
+  <g id="step1">
+    <rect x="50" y="60" width="1100" height="120" fill="#e3f2fd" stroke="#2196f3" stroke-width="3" rx="10"/>
+    <text x="100" y="90" font-size="20" font-weight="bold" fill="#1565c0">Step 1: Model as Random Vector (Circular!)</text>
+    
+    <text x="100" y="120" font-size="16" fill="#333">
+      Let X = (X₁, X₂, ..., X₁₀) where Xᵢ = 1 if ad i gets LIKE, 0 if SKIP
+    </text>
+    
+    <text x="100" y="145" font-size="16" fill="#333">
+      Each Xᵢ ~ Bernoulli(0.5) independently
+    </text>
+    
+    <!-- Visual representation with circular connection -->
+    <g transform="translate(100, 155)">
+      <text x="0" y="15" font-size="14" font-weight="bold" fill="#555">X = </text>
+      <rect x="30" y="0" width="40" height="25" fill="white" stroke="#2196f3" stroke-width="2" rx="3"/>
+      <text x="50" y="18" font-size="14" text-anchor="middle" fill="#333">X₁</text>
+      
+      <rect x="80" y="0" width="40" height="25" fill="white" stroke="#2196f3" stroke-width="2" rx="3"/>
+      <text x="100" y="18" font-size="14" text-anchor="middle" fill="#333">X₂</text>
+      
+      <rect x="130" y="0" width="40" height="25" fill="white" stroke="#2196f3" stroke-width="2" rx="3"/>
+      <text x="150" y="18" font-size="14" text-anchor="middle" fill="#333">X₃</text>
+      
+      <text x="180" y="18" font-size="14" text-anchor="middle" fill="#333">...</text>
+      
+      <rect x="210" y="0" width="40" height="25" fill="white" stroke="#2196f3" stroke-width="2" rx="3"/>
+      <text x="230" y="18" font-size="14" text-anchor="middle" fill="#333">X₁₀</text>
+      
+      <!-- Circular arrow -->
+      <path d="M 255 12 Q 280 12, 280 -10 Q 280 -30, 50 -30 Q 25 -30, 25 -10 Q 25 5, 30 12" 
+            fill="none" stroke="#2196f3" stroke-width="2" stroke-dasharray="3,2"/>
+      <polygon points="30,12 25,8 25,16" fill="#2196f3"/>
+      
+      <text x="310" y="15" font-size="13" fill="#2196f3" font-weight="bold">← Wraps around!</text>
+    </g>
+  </g>
+  
+  <!-- Step 2: Define Indicators -->
+  <g id="step2">
+    <rect x="50" y="200" width="1100" height="150" fill="#e8f5e9" stroke="#4caf50" stroke-width="3" rx="10"/>
+    <text x="100" y="230" font-size="20" font-weight="bold" fill="#2e7d32">Step 2: Define Bonus Indicators (Now ALL ads can win!)</text>
+    
+    <text x="100" y="260" font-size="16" fill="#333">
+      Let Bᵢ = 1 if ad i earns a bonus, 0 otherwise (for i = 1, 2, 3, ..., 10)
+    </text>
+    
+    <text x="100" y="285" font-size="16" fill="#333">
+      Bonus condition: Bᵢ = 1 ⟺ Xᵢ ≠ X₍ᵢ₋₁₎ₘₒ𝒹 ₁₀ AND Xᵢ ≠ X₍ᵢ₊₁₎ₘₒ𝒹 ₁₀
+    </text>
+    
+    <text x="100" y="310" font-size="14" fill="#2196f3" font-weight="bold">
+      Key: For i=1, neighbors are 10 and 2. For i=10, neighbors are 9 and 1!
+    </text>
+    
+    <!-- Visual patterns -->
+    <g transform="translate(100, 315)">
+      <text x="0" y="25" font-size="15" font-weight="bold" fill="#4caf50">Winning patterns (same as before):</text>
+      
+      <!-- Pattern 1: L-S-L -->
+      <g transform="translate(280, 10)">
+        <rect x="0" y="0" width="35" height="30" fill="#4caf50" stroke="#2e7d32" stroke-width="2" rx="3"/>
+        <text x="17.5" y="21" font-size="14" text-anchor="middle" fill="white" font-weight="bold">L</text>
+        
+        <rect x="40" y="0" width="35" height="30" fill="#ff9800" stroke="#f57c00" stroke-width="2" rx="3"/>
+        <text x="57.5" y="21" font-size="14" text-anchor="middle" fill="white" font-weight="bold">S</text>
+        
+        <rect x="80" y="0" width="35" height="30" fill="#4caf50" stroke="#2e7d32" stroke-width="2" rx="3"/>
+        <text x="97.5" y="21" font-size="14" text-anchor="middle" fill="white" font-weight="bold">L</text>
+        
+        <!-- Arrow pointing to middle -->
+        <line x1="57.5" y1="35" x2="57.5" y2="45" stroke="#ff8f00" stroke-width="3" marker-end="url(#arrowdown)"/>
+        <circle cx="57.5" cy="50" r="8" fill="#ffd700" stroke="#ff8f00" stroke-width="2"/>
+        <text x="57.5" y="55" font-size="10" text-anchor="middle" fill="#ff8f00">⭐</text>
+      </g>
+      
+      <text x="440" y="25" font-size="15" fill="#333">or</text>
+      
+      <!-- Pattern 2: S-L-S -->
+      <g transform="translate(480, 10)">
+        <rect x="0" y="0" width="35" height="30" fill="#ff9800" stroke="#f57c00" stroke-width="2" rx="3"/>
+        <text x="17.5" y="21" font-size="14" text-anchor="middle" fill="white" font-weight="bold">S</text>
+        
+        <rect x="40" y="0" width="35" height="30" fill="#4caf50" stroke="#2e7d32" stroke-width="2" rx="3"/>
+        <text x="57.5" y="21" font-size="14" text-anchor="middle" fill="white" font-weight="bold">L</text>
+        
+        <rect x="80" y="0" width="35" height="30" fill="#ff9800" stroke="#f57c00" stroke-width="2" rx="3"/>
+        <text x="97.5" y="21" font-size="14" text-anchor="middle" fill="white" font-weight="bold">S</text>
+        
+        <!-- Arrow pointing to middle -->
+        <line x1="57.5" y1="35" x2="57.5" y2="45" stroke="#ff8f00" stroke-width="3" marker-end="url(#arrowdown)"/>
+        <circle cx="57.5" cy="50" r="8" fill="#ffd700" stroke="#ff8f00" stroke-width="2"/>
+        <text x="57.5" y="55" font-size="10" text-anchor="middle" fill="#ff8f00">⭐</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Step 3: Calculate Probability -->
+  <g id="step3">
+    <rect x="50" y="370" width="1100" height="120" fill="#fff8e1" stroke="#ff9800" stroke-width="3" rx="10"/>
+    <text x="100" y="400" font-size="20" font-weight="bold" fill="#f57c00">Step 3: Calculate P(Bonus) - Same for ALL ads!</text>
+    
+    <text x="100" y="430" font-size="16" fill="#333">
+      P(Bᵢ = 1) = P(pattern L-S-L) + P(pattern S-L-S)
+    </text>
+    
+    <text x="100" y="455" font-size="16" fill="#333">
+      P(Bᵢ = 1) = (0.5 × 0.5 × 0.5) + (0.5 × 0.5 × 0.5) = 1/8 + 1/8 = 
+    </text>
+    
+    <text x="695" y="455" font-size="20" font-weight="bold" fill="#ff8f00">1/4</text>
+    
+    <text x="100" y="475" font-size="14" fill="#2196f3" font-weight="bold">
+      Note: This is true for ALL i (including i=1 and i=10) due to circular symmetry!
+    </text>
+  </g>
+  
+  <!-- Step 4: Use Linearity of Expectation (THE KEY!) -->
+  <g id="step4">
+    <rect x="50" y="510" width="1100" height="180" fill="#ffebee" stroke="#f44336" stroke-width="4" rx="10"/>
+    
+    <!-- Flash effect for importance -->
+    <rect x="45" y="505" width="1110" height="190" fill="none" stroke="#ff8f00" stroke-width="2" stroke-dasharray="10,5" rx="12" opacity="0.5"/>
+    
+    <text x="100" y="545" font-size="22" font-weight="bold" fill="#d32f2f">
+      Step 4: Linearity of Expectation (The Key Insight!)
+    </text>
+    
+    <text x="100" y="580" font-size="16" fill="#333">
+      Total bonuses: S = B₁ + B₂ + B₃ + B₄ + B₅ + B₆ + B₇ + B₈ + B₉ + B₁₀
+    </text>
+    <text x="730" y="580" font-size="14" fill="#2196f3">← All 10 ads!</text>
+    
+    <text x="100" y="610" font-size="16" fill="#333">
+      E[S] = E[B₁ + B₂ + ... + B₁₀]
+    </text>
+    
+    <text x="100" y="640" font-size="18" font-weight="bold" fill="#d32f2f">
+      = E[B₁] + E[B₂] + ... + E[B₁₀]
+    </text>
+    <text x="420" y="640" font-size="14" fill="#666">← Linearity works even though Bᵢ's are dependent!</text>
+    
+    <text x="100" y="670" font-size="18" font-weight="bold" fill="#d32f2f">
+      = 10 × (1/4) = 
+    </text>
+    
+    <rect x="245" y="648" width="80" height="35" fill="#ffd700" stroke="#ff8f00" stroke-width="3" rx="5"/>
+    <text x="285" y="673" font-size="24" font-weight="bold" text-anchor="middle" fill="#d32f2f">2.5</text>
+  </g>
+  
+  <!-- Final Answer Box -->
+  <g id="answer">
+    <rect x="250" y="715" width="700" height="70" fill="#4caf50" stroke="#2e7d32" stroke-width="4" rx="10"/>
+    <text x="600" y="745" font-size="22" font-weight="bold" text-anchor="middle" fill="white">
+      ANSWER: Expected number of bonuses = 2.5
+    </text>
+    <text x="600" y="770" font-size="14" text-anchor="middle" fill="white">
+      (Circular carousel: all 10 ads can earn bonuses! Linear would give only 2.0)
+    </text>
+  </g>
+  
+  <!-- Annotations showing difference -->
+  <g id="annotations">
+    <!-- Left annotation: Linear version -->
+    <rect x="50" y="710" width="170" height="75" fill="#f5f5f5" stroke="#999" stroke-width="2" rx="5"/>
+    <text x="135" y="730" font-size="12" font-weight="bold" text-anchor="middle" fill="#666">Linear Version</text>
+    <text x="135" y="748" font-size="11" text-anchor="middle" fill="#333">Only ads 2-9</text>
+    <text x="135" y="763" font-size="11" text-anchor="middle" fill="#333">can win bonuses</text>
+    <text x="135" y="778" font-size="13" font-weight="bold" text-anchor="middle" fill="#f44336">E[S] = 2.0</text>
+  </g>
+  
+  <g id="right-annotation">
+    <!-- Right annotation: Circular version -->
+    <rect x="980" y="710" width="170" height="75" fill="#e8f5e9" stroke="#4caf50" stroke-width="2" rx="5"/>
+    <text x="1065" y="730" font-size="12" font-weight="bold" text-anchor="middle" fill="#2e7d32">✓ Circular Version</text>
+    <text x="1065" y="748" font-size="11" text-anchor="middle" fill="#333">ALL ads 1-10</text>
+    <text x="1065" y="763" font-size="11" text-anchor="middle" fill="#333">can win bonuses</text>
+    <text x="1065" y="778" font-size="13" font-weight="bold" text-anchor="middle" fill="#4caf50">E[S] = 2.5</text>
+  </g>
+  
+  <!-- Key insight callout -->
+  <g id="key-insight">
+    <path d="M 950 520 L 1050 520 L 1050 585 L 1060 585 L 1040 605 L 1020 585 L 1050 585 L 1050 540 L 950 540 Z" 
+          fill="#fff8e1" stroke="#ff9800" stroke-width="2"/>
+    <text x="970" y="535" font-size="10" font-weight="bold" fill="#f57c00">Circular ≠ Linear!</text>
+    <text x="970" y="550" font-size="9" fill="#333">Circular: 2.5</text>
+    <text x="970" y="562" font-size="9" fill="#333">Linear: 2.0</text>
+    <text x="970" y="574" font-size="9" fill="#333">+25% more</text>
+    <text x="970" y="586" font-size="9" fill="#333">bonuses!</text>
+  </g>
+  
+  <!-- Arrow definitions -->
+  <defs>
+    <marker id="arrowdown" markerWidth="10" markerHeight="10" refX="5" refY="0" orient="auto">
+      <polygon points="0 0, 10 0, 5 10" fill="#ff8f00"/>
+    </marker>
+  </defs>
+</svg>

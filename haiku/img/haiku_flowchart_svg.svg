@@ -1,0 +1,106 @@
+<svg width="800" height="1100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+     refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+  
+  <!-- START -->
+  <ellipse cx="400" cy="50" rx="50" ry="25" fill="#e8f5e8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="400" y="55" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">START</text>
+  
+  <!-- Initialize Line & Budget -->
+  <rect x="320" y="100" width="160" height="60" rx="10" fill="#f0f8ff" stroke="#4a90e2" stroke-width="2"/>
+  <text x="400" y="125" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Initialize</text>
+  <text x="400" y="140" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Line &amp; Budget</text>
+  
+  <!-- Select Model -->
+  <rect x="320" y="200" width="160" height="60" rx="10" fill="#f0f8ff" stroke="#4a90e2" stroke-width="2"/>
+  <text x="400" y="225" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Select Model</text>
+  <text x="400" y="240" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">(Order-1/2)</text>
+  
+  <!-- Get Candidates -->
+  <rect x="320" y="300" width="160" height="60" rx="10" fill="#f0f8ff" stroke="#4a90e2" stroke-width="2"/>
+  <text x="400" y="325" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Get Candidates</text>
+  <text x="400" y="340" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">from Dictionary</text>
+  
+  <!-- Check Syllables -->
+  <rect x="320" y="400" width="160" height="60" rx="10" fill="#f0f8ff" stroke="#4a90e2" stroke-width="2"/>
+  <text x="400" y="425" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Check Syllables</text>
+  <text x="400" y="440" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">vs Budget</text>
+  
+  <!-- Word fits? Decision -->
+  <polygon points="400,490 450,520 400,550 350,520" fill="#fff2cc" stroke="#d6b656" stroke-width="2"/>
+  <text x="400" y="520" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Word fits?</text>
+  
+  <!-- Add Word to Line -->
+  <rect x="320" y="600" width="160" height="60" rx="10" fill="#f0f8ff" stroke="#4a90e2" stroke-width="2"/>
+  <text x="400" y="625" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Add Word to</text>
+  <text x="400" y="640" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Line</text>
+  
+  <!-- Budget reached? Decision -->
+  <polygon points="400,690 450,720 400,750 350,720" fill="#fff2cc" stroke="#d6b656" stroke-width="2"/>
+  <text x="400" y="720" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Budget reached?</text>
+  
+  <!-- Line Complete -->
+  <rect x="320" y="800" width="160" height="60" rx="10" fill="#f0f8ff" stroke="#4a90e2" stroke-width="2"/>
+  <text x="400" y="820" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Line Complete</text>
+  <text x="400" y="835" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Use last 2</text>
+  <text x="400" y="850" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">words as bridge</text>
+  
+  <!-- All lines done? Decision -->
+  <polygon points="400,890 450,920 400,950 350,920" fill="#fff2cc" stroke="#d6b656" stroke-width="2"/>
+  <text x="400" y="920" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">All lines done?</text>
+  
+  <!-- HAIKU COMPLETE -->
+  <ellipse cx="400" cy="990" rx="80" ry="25" fill="#e8f5e8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="400" y="995" text-anchor="middle" font-family="Arial" font-size="14" fill="#333">HAIKU COMPLETE</text>
+  
+  <!-- Ghost Prefix Fallback -->
+  <rect x="580" y="480" width="160" height="80" rx="10" fill="#ffe6e6" stroke="#d63384" stroke-width="2"/>
+  <text x="660" y="505" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Ghost Prefix</text>
+  <text x="660" y="520" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Fallback:</text>
+  <text x="660" y="535" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Try random</text>
+  <text x="660" y="550" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">prefix from dict</text>
+  
+  <!-- Arrows -->
+  <line x1="400" y1="75" x2="400" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="160" x2="400" y2="200" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="260" x2="400" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="360" x2="400" y2="400" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="460" x2="400" y2="490" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Word fits? YES -->
+  <line x1="400" y1="550" x2="400" y2="600" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="410" y="575" font-family="Arial" font-size="10" fill="#333">Yes</text>
+  
+  <!-- Word fits? NO -->
+  <line x1="450" y1="520" x2="580" y2="520" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="515" y="515" font-family="Arial" font-size="10" fill="#333">No</text>
+  
+  <!-- Add Word to Budget reached? -->
+  <line x1="400" y1="660" x2="400" y2="690" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Budget reached? YES -->
+  <line x1="400" y1="750" x2="400" y2="800" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="410" y="775" font-family="Arial" font-size="10" fill="#333">Yes</text>
+  
+  <!-- Budget reached? NO - loop back -->
+  <path d="M 350 720 L 280 720 L 280 230 L 320 230" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="285" y="715" font-family="Arial" font-size="10" fill="#333">No</text>
+  
+  <!-- Line Complete to All lines done? -->
+  <line x1="400" y1="860" x2="400" y2="890" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- All lines done? YES -->
+  <line x1="400" y1="950" x2="400" y2="965" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="410" y="955" font-family="Arial" font-size="10" fill="#333">Yes</text>
+  
+  <!-- All lines done? NO - loop back to Initialize -->
+  <path d="M 450 920 L 500 920 L 500 130 L 480 130" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="505" y="915" font-family="Arial" font-size="10" fill="#333">No</text>
+  
+  <!-- Ghost Prefix back to Select Model -->
+  <path d="M 660 480 L 660 230 L 480 230" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+</svg>

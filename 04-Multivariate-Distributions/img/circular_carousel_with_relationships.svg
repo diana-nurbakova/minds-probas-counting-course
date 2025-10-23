@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 750">
+  <!-- Title -->
+  <text x="450" y="35" font-size="26" font-weight="bold" text-anchor="middle" fill="#1565c0">
+    Circular Carousel: Neighbor Relationships
+  </text>
+  
+  <text x="450" y="65" font-size="14" text-anchor="middle" fill="#666">
+    Each ad is connected to exactly two neighbors in the circle
+  </text>
+  
+  <!-- Main circle center -->
+  <circle cx="450" cy="450" r="3" fill="#999"/>
+  
+  <!-- Outer guide circle -->
+  <circle cx="450" cy="450" r="220" fill="none" stroke="#e0e0e0" stroke-width="2" stroke-dasharray="8,4"/>
+  
+  <!-- Inner connections circle -->
+  <!-- <circle cx="450" cy="450" r="220" fill="none" stroke="#90caf9" stroke-width="1" opacity="0.3"/>-->
+  
+  <!-- Calculate positions for 10 ads in circle -->
+  <!-- Radius = 220, angles: 0°, 36°, 72°, 108°, 144°, 180°, 216°, 252°, 288°, 324° -->
+  
+  <!-- Ad 1 at top (0°/360°) - coordinates: (450, 230) - Like - BONUS -->
+  <g id="ad1">
+    <rect x="408" y="188" width="84" height="84" fill="#4caf50" stroke="#2e7d32" stroke-width="4" rx="8"/>
+    <text x="450" y="218" font-size="14" text-anchor="middle" fill="white" font-weight="bold">Ad 1</text>
+    <text x="450" y="245" font-size="28" text-anchor="middle" fill="white">👍</text>
+    <text x="450" y="265" font-size="12" text-anchor="middle" fill="white" font-weight="bold">LIKE</text>
+    
+    <!-- Bonus indicator -->
+    <circle cx="450" cy="165" r="20" fill="#ffd700" stroke="#ff8f00" stroke-width="3"/>
+    <text x="450" y="173" font-size="18" text-anchor="middle" fill="#ff8f00">⭐</text>
+    
+    <!-- Label -->
+    <text x="450" y="155" font-size="11" text-anchor="middle" fill="#ff8f00" font-weight="bold">BONUS!</text>
+  </g>
+  
+  <!-- Ad 2 at 36° - coordinates: (587, 289) - Skip - BONUS -->
+  <g id="ad2">
+    <rect x="545" y="247" width="84" height="84" fill="#ff9800" stroke="#f57c00" stroke-width="4" rx="8"/>
+    <text x="587" y="277" font-size="14" text-anchor="middle" fill="white" font-weight="bold">Ad 2</text>
+    <text x="587" y="304" font-size="28" text-anchor="middle" fill="white">⏭️</text>
+    <text x="587" y="324" font-size="12" text-anchor="middle" fill="white" font-weight="bold">SKIP</text>
+    
+    <!-- Bonus indicator -->
+    <circle cx="620" cy="260" r="20" fill="#ffd700" stroke="#ff8f00" stroke-width="3"/>
+    <text x="620" y="268" font-size="18" text-anchor="middle" fill="#ff8f00">⭐</text>
+  </g>
+  
+  <!-- Ad 3 at 72° - coordinates: (646, 402) - Like - No bonus -->
+  <g id="ad3">
+    <rect x="604" y="360" width="84" height="84" fill="#4caf50" stroke="#2e7d32" stroke-width="4" rx="8"/>
+    <text x="646" y="390" font-size="14" text-anchor="middle" fill="white" font-weight="bold">Ad 3</text>
+    <text x="646" y="417" font-size="28" text-anchor="middle" fill="white">👍</text>
+    <text x="646" y="437" font-size="12" text-anchor="middle" fill="white" font-weight="bold">LIKE</text>
+  </g>
+  
+  <!-- Ad 4 at 108° - coordinates: (646, 538) - Like - No bonus -->
+  <g id="ad4">
+    <rect x="604" y="496" width="84" height="84" fill="#4caf50" stroke="#2e7d32" stroke-width="4" rx="8"/>
+    <text x="646" y="526" font-size="14" text-anchor="middle" fill="white" font-weight="bold">Ad 4</text>
+    <text x="646" y="553" font-size="28" text-anchor="middle" fill="white">👍</text>
+    <text x="646" y="573" font-size="12" text-anchor="middle" fill="white" font-weight="bold">LIKE</text>
+  </g>
+  
+  <!-- Ad 5 at 144° - coordinates: (587, 651) - Skip - BONUS -->
+  <g id="ad5">
+    <rect x="545" y="609" width="84" height="84" fill="#ff9800" stroke="#f57c00" stroke-width="4" rx="8"/>
+    <text x="587" y="639" font-size="14" text-anchor="middle" fill="white" font-weight="bold">Ad 5</text>
+    <text x="587" y="666" font-size="28" text-anchor="middle" fill="white">⏭️</text>
+    <text x="587" y="686" font-size="12" text-anchor="middle" fill="white" font-weight="bold">SKIP</text>
+    
+    <!-- Bonus indicator -->
+    <circle cx="620" cy="680" r="20" fill="#ffd700" stroke="#ff8f00" stroke-width="3"/>
+    <text x="620" y="688" font-size="18" text-anchor="middle" fill="#ff8f00">⭐</text>
+  </g>
+  
+  <!-- Ad 6 at 180° - coordinates: (450, 670) - Like - No bonus -->
+  <g id="ad6">
+    <rect x="408" y="628" width="84" height="84" fill="#4caf50" stroke="#2e7d32" stroke-width="4" rx="8"/>
+    <text x="450" y="658" font-size="14" text-anchor="middle" fill="white" font-weight="bold">Ad 6</text>
+    <text x="450" y="685" font-size="28" text-anchor="middle" fill="white">👍</text>
+    <text x="450" y="705" font-size="12" text-anchor="middle" fill="white" font-weight="bold">LIKE</text>
+	
+	<!-- Bonus indicator -->
+    <circle cx="408" cy="700" r="20" fill="#ffd700" stroke="#ff8f00" stroke-width="3"/>
+    <text x="408" y="708" font-size="18" text-anchor="middle" fill="#ff8f00">⭐</text>
+  </g>
+  
+  <!-- Ad 7 at 216° - coordinates: (313, 651) - Skip - BONUS -->
+  <g id="ad7">
+    <rect x="271" y="609" width="84" height="84" fill="#ff9800" stroke="#f57c00" stroke-width="4" rx="8"/>
+    <text x="313" y="639" font-size="14" text-anchor="middle" fill="white" font-weight="bold">Ad 7</text>
+    <text x="313" y="666" font-size="28" text-anchor="middle" fill="white">⏭️</text>
+    <text x="313" y="686" font-size="12" text-anchor="middle" fill="white" font-weight="bold">SKIP</text>
+    
+  </g>
+  
+  <!-- Ad 8 at 252° - coordinates: (254, 538) - Skip - No bonus -->
+  <g id="ad8">
+    <rect x="212" y="496" width="84" height="84" fill="#ff9800" stroke="#f57c00" stroke-width="4" rx="8"/>
+    <text x="254" y="526" font-size="14" text-anchor="middle" fill="white" font-weight="bold">Ad 8</text>
+    <text x="254" y="553" font-size="28" text-anchor="middle" fill="white">⏭️</text>
+    <text x="254" y="573" font-size="12" text-anchor="middle" fill="white" font-weight="bold">SKIP</text>
+  </g>
+  
+  <!-- Ad 9 at 288° - coordinates: (254, 402) - Like - BONUS -->
+  <g id="ad9">
+    <rect x="212" y="360" width="84" height="84" fill="#4caf50" stroke="#2e7d32" stroke-width="4" rx="8"/>
+    <text x="254" y="390" font-size="14" text-anchor="middle" fill="white" font-weight="bold">Ad 9</text>
+    <text x="254" y="417" font-size="28" text-anchor="middle" fill="white">👍</text>
+    <text x="254" y="437" font-size="12" text-anchor="middle" fill="white" font-weight="bold">LIKE</text>
+    
+    <!-- Bonus indicator -->
+    <circle cx="212" cy="370" r="20" fill="#ffd700" stroke="#ff8f00" stroke-width="3"/>
+    <text x="212" y="378" font-size="18" text-anchor="middle" fill="#ff8f00">⭐</text>
+  </g>
+  
+  <!-- Ad 10 at 324° - coordinates: (313, 289) - Skip - BONUS -->
+  <g id="ad10">
+    <rect x="271" y="247" width="84" height="84" fill="#ff9800" stroke="#f57c00" stroke-width="4" rx="8"/>
+    <text x="313" y="277" font-size="14" text-anchor="middle" fill="white" font-weight="bold">Ad 10</text>
+    <text x="313" y="304" font-size="28" text-anchor="middle" fill="white">⏭️</text>
+    <text x="313" y="324" font-size="12" text-anchor="middle" fill="white" font-weight="bold">SKIP</text>
+    
+    <!-- Bonus indicator -->
+    <circle cx="280" cy="260" r="20" fill="#ffd700" stroke="#ff8f00" stroke-width="3"/>
+    <text x="280" y="268" font-size="18" text-anchor="middle" fill="#ff8f00">⭐</text>
+  </g>
+  
+    
+  <!-- Center labels -->
+  <text x="450" y="445" font-size="16" text-anchor="middle" fill="#666" font-weight="bold">Carousel</text>
+  <text x="450" y="465" font-size="14" text-anchor="middle" fill="#999">rotates →</text>
+  
+  <!-- Annotations -->
+  <g id="annotations">
+    <!-- Ad 1 annotation -->
+    <rect x="450" y="80" width="200" height="60" fill="#fff8e1" stroke="#ff9800" stroke-width="2" rx="5"/>
+    <text x="550" y="100" font-size="12" font-weight="bold" text-anchor="middle" fill="#f57c00">Ad 1's Neighbors:</text>
+    <text x="550" y="118" font-size="11" text-anchor="middle" fill="#333">Left: Ad 10 (Skip)</text>
+    <text x="550" y="133" font-size="11" text-anchor="middle" fill="#333">Right: Ad 2 (Skip)</text>
+    
+    <!-- Ad 10 annotation -->
+    <rect x="50" y="240" width="200" height="60" fill="#fff8e1" stroke="#ff9800" stroke-width="2" rx="5"/>
+    <text x="150" y="260" font-size="12" font-weight="bold" text-anchor="middle" fill="#f57c00">Ad 10's Neighbors:</text>
+    <text x="150" y="278" font-size="11" text-anchor="middle" fill="#333">Left: Ad 9 (Like)</text>
+    <text x="150" y="293" font-size="11" text-anchor="middle" fill="#333">Right: Ad 1 (Like)</text>
+  </g>
+  
+  
+  <!-- Legend -->
+  <g id="legend">
+    <rect x="30" y="560" width="80" height="130" fill="white" stroke="#999" stroke-width="2" rx="5"/>
+    <text x="70" y="585" font-size="12" font-weight="bold" text-anchor="middle" fill="#333">Legend</text>
+    
+    <rect x="35" y="595" width="22" height="22" fill="#4caf50" stroke="#2e7d32" stroke-width="2" rx="2"/>
+    <text x="80" y="611" font-size="10" text-anchor="middle" fill="#333">Like</text>
+    
+    <rect x="35" y="625" width="22" height="22" fill="#ff9800" stroke="#f57c00" stroke-width="2" rx="2"/>
+    <text x="80" y="641" font-size="10" text-anchor="middle" fill="#333">Skip</text>
+    
+    <circle cx="46" cy="668" r="10" fill="#ffd700" stroke="#ff8f00" stroke-width="2"/>
+    <text x="46" y="673" font-size="14" text-anchor="middle" fill="#ff8f00">⭐</text>
+	
+    
+    <text x="83" y="670" font-size="10" text-anchor="middle" fill="#333">Bonus</text>
+  </g>
+  
+  <!-- Markers -->
+  <defs>
+    <marker id="arrow-neighbor" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#ff8f00"/>
+    </marker>
+  </defs>
+</svg>

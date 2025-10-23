@@ -1,0 +1,207 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1100">
+  <!-- Title -->
+  <text x="500" y="30" font-size="24" font-weight="bold" text-anchor="middle" fill="#1565c0">
+    Covariance Structure of Circular Carousel
+  </text>
+  
+  <text x="500" y="55" font-size="14" text-anchor="middle" fill="#666">
+    How bonus indicators Bᵢ are correlated with each other
+  </text>
+  
+  <!-- Covariance Matrix Heatmap -->
+  <g id="covariance-matrix" transform="translate(150, 80)">
+    <text x="250" y="-10" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">
+      Covariance Matrix Cov(Bᵢ, Bⱼ)
+    </text>
+    
+    <!-- Column labels -->
+    <g id="col-labels">
+      <text x="30" y="20" font-size="11" text-anchor="middle" fill="#333">B₁</text>
+      <text x="80" y="20" font-size="11" text-anchor="middle" fill="#333">B₂</text>
+      <text x="130" y="20" font-size="11" text-anchor="middle" fill="#333">B₃</text>
+      <text x="180" y="20" font-size="11" text-anchor="middle" fill="#333">B₄</text>
+      <text x="230" y="20" font-size="11" text-anchor="middle" fill="#333">B₅</text>
+      <text x="280" y="20" font-size="11" text-anchor="middle" fill="#333">B₆</text>
+      <text x="330" y="20" font-size="11" text-anchor="middle" fill="#333">B₇</text>
+      <text x="380" y="20" font-size="11" text-anchor="middle" fill="#333">B₈</text>
+      <text x="430" y="20" font-size="11" text-anchor="middle" fill="#333">B₉</text>
+      <text x="480" y="20" font-size="11" text-anchor="middle" fill="#333">B₁₀</text>
+    </g>
+    
+    <!-- Row labels -->
+    <g id="row-labels">
+      <text x="-10" y="65" font-size="11" text-anchor="end" fill="#333">B₁</text>
+      <text x="-10" y="115" font-size="11" text-anchor="end" fill="#333">B₂</text>
+      <text x="-10" y="165" font-size="11" text-anchor="end" fill="#333">B₃</text>
+      <text x="-10" y="215" font-size="11" text-anchor="end" fill="#333">B₄</text>
+      <text x="-10" y="265" font-size="11" text-anchor="end" fill="#333">B₅</text>
+      <text x="-10" y="315" font-size="11" text-anchor="end" fill="#333">B₆</text>
+      <text x="-10" y="365" font-size="11" text-anchor="end" fill="#333">B₇</text>
+      <text x="-10" y="415" font-size="11" text-anchor="end" fill="#333">B₈</text>
+      <text x="-10" y="465" font-size="11" text-anchor="end" fill="#333">B₉</text>
+      <text x="-10" y="515" font-size="11" text-anchor="end" fill="#333">B₁₀</text>
+    </g>
+    
+    <!-- Matrix cells -->
+    <!-- Row 1 -->
+    <rect x="0" y="40" width="45" height="45" fill="#e53935" stroke="white" stroke-width="2"/>
+    <text x="22.5" y="67" font-size="10" text-anchor="middle" fill="white" font-weight="bold">3/16</text>
+    <rect x="50" y="40" width="45" height="45" fill="#ff9800" stroke="white" stroke-width="2"/>
+    <text x="72.5" y="67" font-size="10" text-anchor="middle" fill="white" font-weight="bold">1/16</text>
+    <rect x="100" y="40" width="45" height="45" fill="#e0e0e0" stroke="white" stroke-width="2"/>
+    <text x="122.5" y="67" font-size="10" text-anchor="middle" fill="#666">0</text>
+    <rect x="150" y="40" width="45" height="45" fill="#e0e0e0" stroke="white" stroke-width="2"/>
+    <text x="172.5" y="67" font-size="10" text-anchor="middle" fill="#666">0</text>
+    <rect x="200" y="40" width="45" height="45" fill="#e0e0e0" stroke="white" stroke-width="2"/>
+    <text x="222.5" y="67" font-size="10" text-anchor="middle" fill="#666">0</text>
+    <rect x="250" y="40" width="45" height="45" fill="#e0e0e0" stroke="white" stroke-width="2"/>
+    <text x="272.5" y="67" font-size="10" text-anchor="middle" fill="#666">0</text>
+    <rect x="300" y="40" width="45" height="45" fill="#e0e0e0" stroke="white" stroke-width="2"/>
+    <text x="322.5" y="67" font-size="10" text-anchor="middle" fill="#666">0</text>
+    <rect x="350" y="40" width="45" height="45" fill="#e0e0e0" stroke="white" stroke-width="2"/>
+    <text x="372.5" y="67" font-size="10" text-anchor="middle" fill="#666">0</text>
+    <rect x="400" y="40" width="45" height="45" fill="#e0e0e0" stroke="white" stroke-width="2"/>
+    <text x="422.5" y="67" font-size="10" text-anchor="middle" fill="#666">0</text>
+    <rect x="450" y="40" width="45" height="45" fill="#ff9800" stroke="white" stroke-width="2"/>
+    <text x="472.5" y="67" font-size="10" text-anchor="middle" fill="white" font-weight="bold">1/16</text>
+    
+    <!-- Row 2 -->
+    <rect x="0" y="90" width="45" height="45" fill="#ff9800" stroke="white" stroke-width="2"/>
+    <text x="22.5" y="117" font-size="10" text-anchor="middle" fill="white" font-weight="bold">1/16</text>
+    <rect x="50" y="90" width="45" height="45" fill="#e53935" stroke="white" stroke-width="2"/>
+    <text x="72.5" y="117" font-size="10" text-anchor="middle" fill="white" font-weight="bold">3/16</text>
+    <rect x="100" y="90" width="45" height="45" fill="#ff9800" stroke="white" stroke-width="2"/>
+    <text x="122.5" y="117" font-size="10" text-anchor="middle" fill="white" font-weight="bold">1/16</text>
+    <rect x="150" y="90" width="45" height="45" fill="#e0e0e0" stroke="white" stroke-width="2"/>
+    <text x="172.5" y="117" font-size="10" text-anchor="middle" fill="#666">0</text>
+    <rect x="200" y="90" width="45" height="45" fill="#e0e0e0" stroke="white" stroke-width="2"/>
+    <text x="222.5" y="117" font-size="10" text-anchor="middle" fill="#666">0</text>
+    <rect x="250" y="90" width="45" height="45" fill="#e0e0e0" stroke="white" stroke-width="2"/>
+    <text x="272.5" y="117" font-size="10" text-anchor="middle" fill="#666">0</text>
+    <rect x="300" y="90" width="45" height="45" fill="#e0e0e0" stroke="white" stroke-width="2"/>
+    <text x="322.5" y="117" font-size="10" text-anchor="middle" fill="#666">0</text>
+    <rect x="350" y="90" width="45" height="45" fill="#e0e0e0" stroke="white" stroke-width="2"/>
+    <text x="372.5" y="117" font-size="10" text-anchor="middle" fill="#666">0</text>
+    <rect x="400" y="90" width="45" height="45" fill="#e0e0e0" stroke="white" stroke-width="2"/>
+    <text x="422.5" y="117" font-size="10" text-anchor="middle" fill="#666">0</text>
+    <rect x="450" y="90" width="45" height="45" fill="#e0e0e0" stroke="white" stroke-width="2"/>
+    <text x="472.5" y="117" font-size="10" text-anchor="middle" fill="#666">0</text>
+    
+    <!-- Continuing pattern for rows 3-10 (abbreviated for clarity) -->
+    <!-- Row 3 (showing tridiagonal pattern) -->
+    <rect x="0" y="140" width="45" height="45" fill="#e0e0e0" stroke="white" stroke-width="2"/>
+    <rect x="50" y="140" width="45" height="45" fill="#ff9800" stroke="white" stroke-width="2"/>
+    <rect x="100" y="140" width="45" height="45" fill="#e53935" stroke="white" stroke-width="2"/>
+    <rect x="150" y="140" width="45" height="45" fill="#ff9800" stroke="white" stroke-width="2"/>
+    <!-- ... continuing with zeros ... -->
+    
+    <!-- Visual indication of pattern -->
+    <text x="250" y="250" font-size="16" fill="#999" font-style="italic">
+      [Tridiagonal pattern continues...]
+    </text>
+    
+    <!-- Last row (Row 10) to show wrap-around -->
+    <rect x="0" y="490" width="45" height="45" fill="#ff9800" stroke="white" stroke-width="2"/>
+    <text x="22.5" y="517" font-size="10" text-anchor="middle" fill="white" font-weight="bold">1/16</text>
+    <rect x="50" y="490" width="45" height="45" fill="#e0e0e0" stroke="white" stroke-width="2"/>
+    <rect x="100" y="490" width="45" height="45" fill="#e0e0e0" stroke="white" stroke-width="2"/>
+    <rect x="150" y="490" width="45" height="45" fill="#e0e0e0" stroke="white" stroke-width="2"/>
+    <rect x="200" y="490" width="45" height="45" fill="#e0e0e0" stroke="white" stroke-width="2"/>
+    <rect x="250" y="490" width="45" height="45" fill="#e0e0e0" stroke="white" stroke-width="2"/>
+    <rect x="300" y="490" width="45" height="45" fill="#e0e0e0" stroke="white" stroke-width="2"/>
+    <rect x="350" y="490" width="45" height="45" fill="#e0e0e0" stroke="white" stroke-width="2"/>
+    <rect x="400" y="490" width="45" height="45" fill="#ff9800" stroke="white" stroke-width="2"/>
+    <text x="422.5" y="517" font-size="10" text-anchor="middle" fill="white" font-weight="bold">1/16</text>
+    <rect x="450" y="490" width="45" height="45" fill="#e53935" stroke="white" stroke-width="2"/>
+    <text x="472.5" y="517" font-size="10" text-anchor="middle" fill="white" font-weight="bold">3/16</text>
+  </g>
+  
+  <!-- Legend -->
+  <g id="legend" transform="translate(700, 120)">
+    <text x="0" y="0" font-size="14" font-weight="bold" fill="#333">Color Key:</text>
+    
+    <rect x="0" y="10" width="30" height="30" fill="#e53935" stroke="white" stroke-width="2"/>
+    <text x="40" y="30" font-size="12" fill="#333">3/16 = Var(Bᵢ)</text>
+    <text x="40" y="43" font-size="10" fill="#666">(diagonal)</text>
+    
+    <rect x="0" y="60" width="30" height="30" fill="#ff9800" stroke="white" stroke-width="2"/>
+    <text x="40" y="80" font-size="12" fill="#333">1/16 = Cov(Bᵢ,Bᵢ₊₁)</text>
+    <text x="40" y="93" font-size="10" fill="#666">(adjacent)</text>
+    
+    <rect x="0" y="110" width="30" height="30" fill="#e0e0e0" stroke="white" stroke-width="2"/>
+    <text x="40" y="130" font-size="12" fill="#333">0 = Uncorrelated</text>
+    <text x="40" y="143" font-size="10" fill="#666">(distance ≥ 2)</text>
+  </g>
+  
+  <!-- Key patterns explanation -->
+  <g id="patterns" transform="translate(100, 620)">
+    <rect x="0" y="0" width="800" height="220" fill="#e3f2fd" stroke="#2196f3" stroke-width="2" rx="10"/>
+    
+    <text x="400" y="30" font-size="18" font-weight="bold" text-anchor="middle" fill="#1565c0">
+      Why This Covariance Structure?
+    </text>
+    
+    <!-- Case 1: Same ad -->
+    <g transform="translate(20, 50)">
+      <text x="0" y="0" font-size="14" font-weight="bold" fill="#e53935">Case 1: Same Ad (i = j)</text>
+      <text x="0" y="20" font-size="12" fill="#333">Cov(Bᵢ, Bᵢ) = Var(Bᵢ) = p(1-p)[1 - p(1-p)]</text>
+      <text x="0" y="38" font-size="12" fill="#333">For p=0.5: = 0.25 × 0.75 = 3/16</text>
+    </g>
+    
+    <!-- Case 2: Adjacent -->
+    <g transform="translate(20, 105)">
+      <text x="0" y="0" font-size="14" font-weight="bold" fill="#ff9800">Case 2: Adjacent Ads (|i-j| = 1)</text>
+      <text x="0" y="20" font-size="12" fill="#333">Both can be 1 only in patterns: (0,1,0,0) or (1,0,1,0)</text>
+      <text x="0" y="38" font-size="12" fill="#333">E[BᵢBᵢ₊₁] = 1/8, so Cov = 1/8 - 1/16 = 1/16 > 0</text>
+      <text x="0" y="56" font-size="11" fill="#d32f2f" font-weight="bold">→ Positive correlation!</text>
+    </g>
+    
+    <!-- Case 3: One between -->
+    <g transform="translate(20, 180)">
+      <text x="0" y="0" font-size="14" font-weight="bold" fill="#666">Case 3: One Ad Between (|i-j| = 2)</text>
+      <text x="0" y="20" font-size="12" fill="#333">Requires perfect alternation: (0,1,0,1,0) or (1,0,1,0,1)</text>
+      <text x="0" y="38" font-size="12" fill="#333">E[BᵢBᵢ₊₂] = 1/16 = E[Bᵢ]E[Bᵢ₊₂], so Cov = 0</text>
+      <text x="0" y="56" font-size="11" fill="#666">→ Exactly uncorrelated at p=0.5!</text>
+    </g>
+    
+    <!-- Case 4: Non-overlapping -->
+    <g transform="translate(450, 50)">
+      <text x="0" y="0" font-size="14" font-weight="bold" fill="#666">Case 4: Far Apart (|i-j| ≥ 3)</text>
+      <text x="0" y="20" font-size="12" fill="#333">Non-overlapping neighborhoods</text>
+      <text x="0" y="38" font-size="12" fill="#333">→ Independent → Cov = 0</text>
+    </g>
+  </g>
+  
+  <!-- Total variance calculation -->
+  <g id="total-variance" transform="translate(100, 870)">
+    <rect x="0" y="0" width="800" height="180" fill="#e8f5e9" stroke="#4caf50" stroke-width="3" rx="10"/>
+    
+    <text x="400" y="30" font-size="18" font-weight="bold" text-anchor="middle" fill="#2e7d32">
+      Variance of Total Bonuses S = B₁ + B₂ + ... + B₁₀
+    </text>
+    
+    <g transform="translate(50, 50)">
+      <text x="0" y="0" font-size="14" fill="#333" font-weight="bold">Var(S) = ∑∑ Cov(Bᵢ, Bⱼ)</text>
+      
+      <text x="50" y="30" font-size="13" fill="#333">= ∑ Var(Bᵢ) + ∑∑ Cov(Bᵢ, Bⱼ)</text>
+      <text x="380" y="30" font-size="11" fill="#666">[i≠j]</text>
+      
+      <text x="50" y="55" font-size="13" fill="#333">= 10 × (3/16) + 2 × 10 × (1/16)</text>
+      <text x="380" y="55" font-size="11" fill="#666">[10 diagonal + 20 adjacent pairs]</text>
+      
+      <text x="50" y="80" font-size="13" fill="#333">= 30/16 + 20/16</text>
+      
+      <text x="50" y="105" font-size="15" fill="#2e7d32" font-weight="bold">= 50/16 = 25/8 = 3.125</text>
+      
+      <text x="50" y="130" font-size="12" fill="#666">Standard deviation: SD(S) = √(25/8) ≈ 1.768</text>
+    </g>
+  </g>
+  
+  <!-- Key insight box -->
+  <g id="insight-box" transform="translate(200, 1060)">
+    <rect x="0" y="0" width="600" height="35" fill="#fff8e1" stroke="#ff9800" stroke-width="2" rx="5"/>
+    <text x="300" y="23" font-size="13" font-weight="bold" text-anchor="middle" fill="#f57c00">
+      Key: Positive correlation between adjacent bonuses increases variance by 33%!
+    </text>
+  </g>
+</svg>
