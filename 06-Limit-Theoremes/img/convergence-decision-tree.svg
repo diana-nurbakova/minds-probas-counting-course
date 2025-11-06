@@ -1,0 +1,197 @@
+<svg width="1400" height="1000" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- Define arrow markers -->
+        <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+          <polygon points="0 0, 10 3, 0 6" fill="#333" />
+        </marker>
+        
+        <!-- Define styles -->
+        <style>
+          .decision-box { fill: #e3f2fd; stroke: #1976d2; stroke-width: 2; }
+          .result-box-good { fill: #c8e6c9; stroke: #388e3c; stroke-width: 2; }
+          .result-box-bad { fill: #ffcdd2; stroke: #d32f2f; stroke-width: 2; }
+          .result-box-warning { fill: #fff9c4; stroke: #f57c00; stroke-width: 2; }
+          .box-text { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; }
+          .detail-text { font-family: Arial, sans-serif; font-size: 11px; fill: #555; }
+          .title-text { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; }
+          .connection-line { stroke: #333; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+          .label-text { font-family: Arial, sans-serif; font-size: 12px; fill: #333; font-weight: bold; }
+        </style>
+      </defs>
+      
+      <!-- Title -->
+      <text x="700" y="30" text-anchor="middle" class="title-text" style="font-size: 20px;">
+        Convergence Decision Tree
+      </text>
+      
+      <!-- Start Node -->
+      <rect x="575" y="50" width="250" height="60" rx="10" class="decision-box"/>
+      <text x="700" y="75" text-anchor="middle" class="box-text">Analyze Sequence Xₙ</text>
+      <text x="700" y="95" text-anchor="middle" class="detail-text">Does Xₙ stabilize as n → ∞?</text>
+      
+      <!-- Connection from Start -->
+      <line x1="700" y1="110" x2="700" y2="150" class="connection-line"/>
+      
+      <!-- First Split: Stabilize? -->
+      <line x1="700" y1="150" x2="300" y2="200" class="connection-line"/>
+      <line x1="700" y1="150" x2="1100" y2="200" class="connection-line"/>
+      
+      <!-- NO Branch Label -->
+      <text x="450" y="170" class="label-text" fill="#d32f2f">NO</text>
+      
+      <!-- YES Branch Label -->
+      <text x="950" y="170" class="label-text" fill="#388e3c">YES</text>
+      
+      <!-- NO CONVERGENCE Result -->
+      <rect x="175" y="200" width="250" height="100" rx="10" class="result-box-bad"/>
+      <text x="300" y="225" text-anchor="middle" class="box-text" fill="#c62828">❌ NO CONVERGENCE</text>
+      <text x="300" y="245" text-anchor="middle" class="detail-text">• Training diverging</text>
+      <text x="300" y="260" text-anchor="middle" class="detail-text">• Fix learning rate</text>
+      <text x="300" y="275" text-anchor="middle" class="detail-text">• Check for bugs</text>
+      <text x="300" y="290" text-anchor="middle" class="detail-text">• May have numerical issues</text>
+      
+      <!-- Second Decision: Individual paths converge? -->
+      <rect x="975" y="200" width="250" height="60" rx="10" class="decision-box"/>
+      <text x="1100" y="220" text-anchor="middle" class="box-text">Do individual paths</text>
+      <text x="1100" y="240" text-anchor="middle" class="box-text">converge?</text>
+      
+      <!-- Connection from second decision -->
+      <line x1="1100" y1="260" x2="1100" y2="300" class="connection-line"/>
+      
+      <!-- Third Split: Paths converge? -->
+      <line x1="1100" y1="300" x2="900" y2="350" class="connection-line"/>
+      <line x1="1100" y1="300" x2="1300" y2="350" class="connection-line"/>
+      
+      <!-- NO Branch Label -->
+      <text x="970" y="320" class="label-text" fill="#d32f2f">NO</text>
+      
+      <!-- YES Branch Label -->
+      <text x="1230" y="320" class="label-text" fill="#388e3c">YES</text>
+      
+      <!-- ALMOST SURE Result -->
+      <rect x="1175" y="350" width="250" height="110" rx="10" class="result-box-good"/>
+      <text x="1300" y="375" text-anchor="middle" class="box-text" fill="#1b5e20">✓✓✓ ALMOST SURE</text>
+      <text x="1300" y="395" text-anchor="middle" class="detail-text">• Best guarantee</text>
+      <text x="1300" y="410" text-anchor="middle" class="detail-text">• P(Xₙ → X) = 1</text>
+      <text x="1300" y="425" text-anchor="middle" class="detail-text">• SLLN, Robbins-Monro</text>
+      <text x="1300" y="440" text-anchor="middle" class="detail-text">• LR: ηₙ = 1/n²</text>
+      <text x="1300" y="455" text-anchor="middle" class="detail-text" style="font-weight: bold;">Σηₙ² &lt; ∞</text>
+      
+      <!-- Fourth Decision: Distribution stabilize? -->
+      <rect x="775" y="350" width="250" height="60" rx="10" class="decision-box"/>
+      <text x="900" y="370" text-anchor="middle" class="box-text">Does distribution</text>
+      <text x="900" y="390" text-anchor="middle" class="box-text">stabilize?</text>
+      
+      <!-- Connection from fourth decision -->
+      <line x1="900" y1="410" x2="900" y2="450" class="connection-line"/>
+      
+      <!-- Fifth Split: Distribution stabilizes? -->
+      <line x1="900" y1="450" x2="700" y2="500" class="connection-line"/>
+      <line x1="900" y1="450" x2="1100" y2="500" class="connection-line"/>
+      
+      <!-- NO Branch Label -->
+      <text x="770" y="470" class="label-text" fill="#d32f2f">NO</text>
+      
+      <!-- YES Branch Label -->
+      <text x="1030" y="470" class="label-text" fill="#388e3c">YES</text>
+      
+      <!-- WEIRD CASE Result -->
+      <rect x="575" y="500" width="250" height="90" rx="10" class="result-box-warning"/>
+      <text x="700" y="525" text-anchor="middle" class="box-text" fill="#e65100">⚠️ WEIRD CASE</text>
+      <text x="700" y="545" text-anchor="middle" class="detail-text">• Unusual situation</text>
+      <text x="700" y="560" text-anchor="middle" class="detail-text">• Check setup</text>
+      <text x="700" y="575" text-anchor="middle" class="detail-text">• May indicate bug</text>
+      
+      <!-- DISTRIBUTION ONLY Result -->
+      <rect x="975" y="500" width="250" height="110" rx="10" class="result-box-warning"/>
+      <text x="1100" y="525" text-anchor="middle" class="box-text" fill="#e65100">⚠️ DIST. ONLY</text>
+      <text x="1100" y="545" text-anchor="middle" class="detail-text">• Values oscillate</text>
+      <text x="1100" y="560" text-anchor="middle" class="detail-text">• Distribution stable</text>
+      <text x="1100" y="575" text-anchor="middle" class="detail-text">• SGD const. LR</text>
+      <text x="1100" y="590" text-anchor="middle" class="detail-text">• Bootstrap sampling</text>
+      <text x="1100" y="605" text-anchor="middle" class="detail-text" style="font-weight: bold;">Xₙ →ᵈ X</text>
+      
+      <!-- Connection to Probability check -->
+      <line x1="1100" y1="610" x2="1100" y2="650" class="connection-line"/>
+      
+      <!-- Sixth Decision: P(|Xₙ - X| > ε) → 0? -->
+      <rect x="975" y="650" width="250" height="60" rx="10" class="decision-box"/>
+      <text x="1100" y="670" text-anchor="middle" class="box-text">Can guarantee</text>
+      <text x="1100" y="690" text-anchor="middle" class="box-text">P(|Xₙ - X| > ε) → 0?</text>
+      
+      <!-- Connection from sixth decision -->
+      <line x1="1100" y1="710" x2="1100" y2="750" class="connection-line"/>
+      
+      <!-- Seventh Split: Probability convergence? -->
+      <line x1="1100" y1="750" x2="900" y2="800" class="connection-line"/>
+      <line x1="1100" y1="750" x2="1300" y2="800" class="connection-line"/>
+      
+      <!-- YES Branch Label -->
+      <text x="970" y="770" class="label-text" fill="#388e3c">YES</text>
+      
+      <!-- NO Branch Label -->
+      <text x="1230" y="770" class="label-text" fill="#d32f2f">NO</text>
+      
+      <!-- IN PROBABILITY Result -->
+      <rect x="775" y="800" width="250" height="110" rx="10" class="result-box-good"/>
+      <text x="900" y="825" text-anchor="middle" class="box-text" fill="#2e7d32">✓ IN PROBABILITY</text>
+      <text x="900" y="845" text-anchor="middle" class="detail-text">• Usually good enough</text>
+      <text x="900" y="860" text-anchor="middle" class="detail-text">• LR: ηₙ = 1/n</text>
+      <text x="900" y="875" text-anchor="middle" class="detail-text">• WLLN applies</text>
+      <text x="900" y="890" text-anchor="middle" class="detail-text">• Monte Carlo</text>
+      <text x="900" y="905" text-anchor="middle" class="detail-text" style="font-weight: bold;">Xₙ →ᵖ X</text>
+      
+      <!-- SPECIAL CASE Result -->
+      <rect x="1175" y="800" width="250" height="90" rx="10" class="result-box-warning"/>
+      <text x="1300" y="825" text-anchor="middle" class="box-text" fill="#e65100">⚠️ SPECIAL CASE</text>
+      <text x="1300" y="845" text-anchor="middle" class="detail-text">• Check assumptions</text>
+      <text x="1300" y="860" text-anchor="middle" class="detail-text">• May still be useful</text>
+      <text x="1300" y="875" text-anchor="middle" class="detail-text">• Verify conditions</text>
+      
+      <!-- Hierarchy Box -->
+      <rect x="50" y="650" width="650" height="120" rx="10" fill="#f5f5f5" stroke="#666" stroke-width="2"/>
+      <text x="375" y="675" text-anchor="middle" class="title-text">HIERARCHY OF CONVERGENCE</text>
+      
+      <!-- Hierarchy arrows -->
+      <rect x="80" y="690" width="140" height="40" rx="5" fill="#c8e6c9" stroke="#388e3c" stroke-width="1"/>
+      <text x="150" y="715" text-anchor="middle" style="font-size: 12px; font-weight: bold;">Almost Sure</text>
+      
+      <text x="235" y="710" text-anchor="middle" style="font-size: 18px; font-weight: bold;">⟹</text>
+      
+      <rect x="270" y="690" width="140" height="40" rx="5" fill="#fff9c4" stroke="#f57c00" stroke-width="1"/>
+      <text x="340" y="715" text-anchor="middle" style="font-size: 12px; font-weight: bold;">In Probability</text>
+      
+      <text x="425" y="710" text-anchor="middle" style="font-size: 18px; font-weight: bold;">⟹</text>
+      
+      <rect x="460" y="690" width="140" height="40" rx="5" fill="#ffecb3" stroke="#ff9800" stroke-width="1"/>
+      <text x="530" y="715" text-anchor="middle" style="font-size: 12px; font-weight: bold;">In Distribution</text>
+      
+      <text x="80" y="750" style="font-size: 11px; fill: #666;">(strongest)</text>
+      <text x="290" y="750" style="font-size: 11px; fill: #666;">(medium)</text>
+      <text x="495" y="750" style="font-size: 11px; fill: #666;">(weakest)</text>
+      
+      <text x="375" y="765" text-anchor="middle" style="font-size: 11px; fill: #d32f2f; font-weight: bold;">
+        ⚠️ Reverse implications do NOT hold!
+      </text>
+      
+      <!-- Diagnostics Box -->
+      <rect x="50" y="800" width="650" height="170" rx="10" fill="#f5f5f5" stroke="#666" stroke-width="2"/>
+      <text x="375" y="825" text-anchor="middle" class="title-text">PRACTICAL DIAGNOSTICS</text>
+      
+      <text x="70" y="850" style="font-size: 13px; font-weight: bold;">📊 Plot your sequence:</text>
+      <text x="90" y="870" style="font-size: 11px;">• Diverges → No convergence ❌</text>
+      <text x="90" y="885" style="font-size: 11px;">• Oscillates forever → Check distribution ⚠️</text>
+      <text x="90" y="900" style="font-size: 11px;">• Values stabilize → Check type ✓</text>
+      
+      <text x="400" y="850" style="font-size: 13px; font-weight: bold;">📈 Run multiple seeds:</text>
+      <text x="420" y="870" style="font-size: 11px;">• All diverge → No convergence ❌</text>
+      <text x="420" y="885" style="font-size: 11px;">• All oscillate → Dist. only ⚠️</text>
+      <text x="420" y="900" style="font-size: 11px;">• All → same value → Almost sure ✓✓✓</text>
+      
+      <text x="70" y="925" style="font-size: 13px; font-weight: bold;">📉 Check variance over time:</text>
+      <text x="90" y="945" style="font-size: 11px;">• Var(Xₙ) constant → Dist. only ⚠️</text>
+      <text x="90" y="960" style="font-size: 11px;">• Var(Xₙ) → 0 slowly → In probability ✓</text>
+      
+      <text x="420" y="945" style="font-size: 11px;">• Var(Xₙ) → 0 fast → Almost sure ✓✓✓</text>
+      
+    </svg>
