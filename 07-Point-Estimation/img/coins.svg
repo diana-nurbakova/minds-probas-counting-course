@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 150">
+  <!-- Define gradients for 3D coin effect -->
+  <defs>
+    <radialGradient id="goldGradient" cx="30%" cy="30%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DAA520;stop-opacity:1" />
+    </radialGradient>
+    <radialGradient id="silverGradient" cx="30%" cy="30%">
+      <stop offset="0%" style="stop-color:#E8E8E8;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#C0C0C0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A8A8A8;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Coin 1: H -->
+  <circle cx="55" cy="75" r="45" fill="url(#goldGradient)" stroke="#B8860B" stroke-width="3"/>
+  <text x="55" y="85" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#8B4513" text-anchor="middle">H</text>
+  
+  <!-- Coin 2: T -->
+  <circle cx="165" cy="75" r="45" fill="url(#silverGradient)" stroke="#808080" stroke-width="3"/>
+  <text x="165" y="85" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#404040" text-anchor="middle">T</text>
+  
+  <!-- Coin 3: H -->
+  <circle cx="275" cy="75" r="45" fill="url(#goldGradient)" stroke="#B8860B" stroke-width="3"/>
+  <text x="275" y="85" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#8B4513" text-anchor="middle">H</text>
+  
+  <!-- Coin 4: H -->
+  <circle cx="385" cy="75" r="45" fill="url(#goldGradient)" stroke="#B8860B" stroke-width="3"/>
+  <text x="385" y="85" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#8B4513" text-anchor="middle">H</text>
+  
+  <!-- Coin 5: H -->
+  <circle cx="495" cy="75" r="45" fill="url(#goldGradient)" stroke="#B8860B" stroke-width="3"/>
+  <text x="495" y="85" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#8B4513" text-anchor="middle">H</text>
+  
+  <!-- Coin 6: T -->
+  <circle cx="605" cy="75" r="45" fill="url(#silverGradient)" stroke="#808080" stroke-width="3"/>
+  <text x="605" y="85" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#404040" text-anchor="middle">T</text>
+  
+  <!-- Coin 7: H -->
+  <circle cx="715" cy="75" r="45" fill="url(#goldGradient)" stroke="#B8860B" stroke-width="3"/>
+  <text x="715" y="85" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#8B4513" text-anchor="middle">H</text>
+  
+  <!-- Coin 8: H -->
+  <circle cx="825" cy="75" r="45" fill="url(#goldGradient)" stroke="#B8860B" stroke-width="3"/>
+  <text x="825" y="85" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#8B4513" text-anchor="middle">H</text>
+  
+  <!-- Coin 9: H -->
+  <circle cx="935" cy="75" r="45" fill="url(#goldGradient)" stroke="#B8860B" stroke-width="3"/>
+  <text x="935" y="85" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#8B4513" text-anchor="middle">H</text>
+  
+  <!-- Coin 10: H -->
+  <circle cx="1045" cy="75" r="45" fill="url(#goldGradient)" stroke="#B8860B" stroke-width="3"/>
+  <text x="1045" y="85" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#8B4513" text-anchor="middle">H</text>
+</svg>
